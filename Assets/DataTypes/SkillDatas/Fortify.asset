@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce86080168f7924aad8afb0e5bf0513, type: 3}
+  m_Name: Fortify
+  m_EditorClassIdentifier: 
+  skillName: Fortify
+  description: Increase physical defense by 40% for 3 turns.
+  passive: 0
+  hpCost: 0
+  mpCost: 3
+  apCost: 0
+  target: 0
+  apGain: 2
+  attackStrength: 0
+  level: 0
+  statuses:
+  - {fileID: 11400000, guid: 9f0f6ca7951161a49b178f9b6d5d7b40, type: 2}
+  statusChances: 64000000
+  minHealing: 0
+  maxHealing: 0
+  healingPercentage: 0
+  weaponAttackPercentage: 0
