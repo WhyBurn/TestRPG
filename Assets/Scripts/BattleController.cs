@@ -9,7 +9,7 @@ public class BattleController : MonoBehaviour
     private EnemyCharacter[] enemyCharacters;
     private int expReward;
     private int goldReward;
-    private bool animating;
+    private RPGAnimation currentAnimation;
 
     public GameObject turnOrderParent;
     public GameObject userInterface;
@@ -20,6 +20,17 @@ public class BattleController : MonoBehaviour
         float heightRatio = Data.defaultResolution.x * Screen.height / Data.defaultResolution.y / Screen.width;
         turnOrderParent.transform.localPosition = new Vector3(0, (heightRatio * (Screen.height / 2)) - 1, 0);
         userInterface.transform.localPosition = new Vector3(0, (heightRatio * (Screen.height / -2)) + 1, 0);
+        if(currentAnimation != null)
+        {
+            if(currentAnimation.Animate(Time.deltaTime))
+            {
+                currentAnimation = currentAnimation.GetNextAnimation();
+            }
+        }
+        else
+        {
+
+        }
     }
 
     public void SetUpBattle(List<PlayerCharacter> party, EnemyGroup enemies)
@@ -36,6 +47,7 @@ public class BattleController : MonoBehaviour
         }
         goldReward = enemies.gold;
         expReward = enemies.exp;
+        currentAnimation = null;
     }
     public void ClearTurnOrder()
     {

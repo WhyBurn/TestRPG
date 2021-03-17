@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Job.cs" />
     <Compile Include="Assets\Scripts\JobData.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacter.cs" />
+    <Compile Include="Assets\Scripts\RPGAnimation.cs" />
     <Compile Include="Assets\Scripts\SkillData.cs" />
     <Compile Include="Assets\Scripts\Status.cs" />
     <Compile Include="Assets\Scripts\StatusData.cs" />
