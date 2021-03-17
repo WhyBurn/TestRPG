@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/SkillData", order = 5)]
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/SkillData", order = 6)]
 public class SkillData : ScriptableObject
 {
     public string skillName;

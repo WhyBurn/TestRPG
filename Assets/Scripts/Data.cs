@@ -9,6 +9,7 @@ public static class Data
     public enum RemoveType { duration = 0, indefinate = 1, chance = 2 };
     public enum TargetType { self = 0, ally = 1, enemy = 2, allAllies = 3, allEnemies = 4 };
     public enum ItemType { weapon = 0, helmet = 1, armor = 2, accessory = 3, consumable = 4, keyItem = 5};
+    public enum EventType { dialog = 0, changeValue = 1, startBattle = 2};
 
     public static Vector2 defaultResolution = new Vector2(800, 600);
 }
