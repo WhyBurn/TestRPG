@@ -20,6 +20,7 @@ public class BattleController : MonoBehaviour
         float heightRatio = Data.defaultResolution.x * Screen.height / Data.defaultResolution.y / Screen.width;
         turnOrderParent.transform.localPosition = new Vector3(0, (heightRatio * (Screen.height / 2)) - 1, 0);
         userInterface.transform.localPosition = new Vector3(0, (heightRatio * (Screen.height / -2)) + 1, 0);
+        userInterface.SetActive(false);
         if(currentAnimation != null)
         {
             if(currentAnimation.Animate(Time.deltaTime))
@@ -29,7 +30,22 @@ public class BattleController : MonoBehaviour
         }
         else
         {
+            Character activeCharacter = GetActiveCharacter();
+            if(activeCharacter == null)
+            {
+                IncrementInitiative();
+            }
+            else
+            {
+                if(PlayerTurn())
+                {
+                    userInterface.SetActive(true);
+                }
+                else
+                {
 
+                }
+            }
         }
     }
 
@@ -144,5 +160,10 @@ public class BattleController : MonoBehaviour
             }
         }
         return (null);
+    }
+
+    public void UseSkill(Character actingCharacter, SkillData usedSkill, int targetPosition)
+    {
+
     }
 }
